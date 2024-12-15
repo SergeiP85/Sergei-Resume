@@ -21,16 +21,35 @@ a:hover {
 header {
   background: #333;
   color: white;
+  padding: 1.5rem;
   text-align: center;
-  padding: 1rem;
 }
 
-header h1 {
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures proper alignment on smaller screens */
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-right: 1rem;
+  border: 3px solid #007acc;
+}
+
+.header-text {
+  text-align: left;
+}
+
+.header-text h1 {
   margin: 0;
   font-size: 2.5rem;
 }
 
-header p {
+.header-text p {
   margin: 0.5rem 0;
 }
 
@@ -47,7 +66,7 @@ h2 {
 }
 
 h3 {
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1.2rem;
   color: #333;
 }
@@ -59,7 +78,16 @@ ul {
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Logos */
+.company-logo {
+  display: block;
+  margin: 1rem auto;
+  width: 150px;
+  height: auto;
+  object-fit: contain; /* Ensures logos are proportionally resized */
 }
 
 /* Footer */
@@ -69,4 +97,20 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-picture {
+    margin: 0 0 1rem 0;
+  }
+
+  .header-text {
+    text-align: center;
+  }
 }
